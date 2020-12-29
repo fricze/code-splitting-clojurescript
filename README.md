@@ -12,3 +12,7 @@ npx shadow-cljs release app
 ```
 
 and then open http://localhost:8000.
+
+## Why
+
+Because @thheller original solution forces props given to lazy loaded components to be transformed to JS and that *really* spoils the fun. We're losing React Suspense semantics here but it's way easier to just go with reagent atom and avoid React Suspense and React lazy.
